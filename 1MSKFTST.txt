@@ -33,11 +33,11 @@ DATA "423339542439246B244B244F323F242B252D213C2472322124372446242F24402435242421
 DATA "_"
 
 '====================
-' 2 �ݽ� �ݶ�
+' 2 ｼﾝｽｳ ﾍﾝｶﾝ
 '====================
 @NUM2BIN
-'INPUT : NUM  // 2�ݽ� � �ٶ��
-'OUTPUT: BIN$ // 2�ݽ� � �ݶ� �� ���
+'INPUT : NUM  // 2ｼﾝｽｳ ﾆ ｽﾙｶｽﾞ
+'OUTPUT: BIN$ // 2ｼﾝｽｳ ﾆ ﾍﾝｶﾝ ｼﾀ ｶｽﾞ
  N=NUM:R=0:BIN$=""
 '-----
 @NUM2BINLOOP
@@ -46,7 +46,7 @@ DATA "_"
 GOTO @NUM2BINLOOP
 
 '====================
-' ��ݺ� ˮ��� ֳ
+' ﾆﾎﾝｺﾞ ﾋｮｳｼﾞ ﾖｳ
 '====================
 @INITFONT
  ROW=0:CELL=0:PAGE=0 ' FOR JIS CODE
@@ -55,8 +55,8 @@ GOTO @NUM2BINLOOP
  CHRDATA$=""
  POSX=0:POSY=0
  BASEPOSX=0:BASEPOSY=0
- CHRINDEX=0 ' ��׸� ��ݺ޳
- SUBINDEX=0 ' ��׸� Ų � ���ޯ��(0~4)
+ CHRINDEX=0 ' ｷｬﾗｸﾀ ﾊﾞﾝｺﾞｳ
+ SUBINDEX=0 ' ｷｬﾗｸﾀ ﾅｲ ﾉ ｲﾝﾃﾞｯｸｽ(0~4)
  
  FONTCHRPREFIX$="SPU"
  FONTSTARTPAGE=4 ' 0~4
@@ -127,7 +127,7 @@ GOTO @NUM2BINLOOP
  RETURN
 '=====
 @WRITETMPFONT
-' ˮ��޽� ��� ̫���ް� � �ݶ�
+' ﾋｮｳｼﾞｽﾙ ﾀﾒﾆ ﾌｫﾝﾄﾃﾞｰﾀ ｦ ﾃﾝｶｲ
 ' INPUT: ROW, CELL
  GOSUB @GETFONTDATA
  GOSUB @FONTDATA2CHRDATA

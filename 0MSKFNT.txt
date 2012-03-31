@@ -1,14 +1,14 @@
 CLS:CLEAR:RESTORE @MISAKIFONTDATA
-? "л�̫�� � �ް� � ���� �Ͻ"
+? "ﾐｻｷﾌｫﾝﾄ ﾉ ﾃﾞｰﾀ ｦ ｻｸｾｲ ｼﾏｽ"
 GOSUB @INITFONT
-? "���خ��ϼ�"
+? "ｼｭｳﾘｮｳｼﾏｼﾀ"
 END
 '=====================
-' 2�ݽ� �ݶ�
+' 2ｼﾝｽｳ ﾍﾝｶﾝ
 '=====================
 @NUM2BIN
-'INPUT : NUM // 2�ݽ� � �ٶ��
-'OUTPUT: BIN$ // 2�ݽ� � �ݶ� �� ���
+'INPUT : NUM // 2ｼﾝｽｳ ﾆ ｽﾙｶｽﾞ
+'OUTPUT: BIN$ // 2ｼﾝｽｳ ﾆ ﾍﾝｶﾝ ｼﾀ ｶｽﾞ
  _N=NUM:R=0:BIN$=""
 '-----
 @NUM2BINLOOP
@@ -16,15 +16,15 @@ END
  _R=_N%2:N=FLOOR(_N/2):BIN$=STR$(_R)+BIN$
  GOTO @NUM2BINLOOP
 '=====================
-' ��ݺ�̫�� �ް� ����
+' ﾆﾎﾝｺﾞﾌｫﾝﾄ ﾃﾞｰﾀ ｻｸｾｲ
 '=====================
 @INITFONT
  ROW=0:CELL=0:PAGE=0 ' FOR JIS CODE
  INDEX=0
  FONTDATA$="" ' FONT DATA
  CHRDATA$=""
- CHRINDEX=0 ' ��׸� ��ݺ޳
- SUBINDEX=0 ' ��׸� Ų � ���ޯ��(0~3)
+ CHRINDEX=0 ' ｷｬﾗｸﾀ ﾊﾞﾝｺﾞｳ
+ SUBINDEX=0 ' ｷｬﾗｸﾀ ﾅｲ ﾉ ｲﾝﾃﾞｯｸｽ(0~3)
 
  FONTCHRPREFIX$="SPU"
  FONTSTARTPAGE=4
@@ -39,7 +39,7 @@ END
 ' INPUT : ROW, CELL // JIS CODE
 ' OUTPUT: FONTDATA$ // FONT DATA
  FONTDATA$=""
-' �޲�����ޭ� ���
+' ﾀﾞｲｲﾁｽｲｼﾞｭﾝ ﾏﾃﾞ
  IF ROW>47 THEN RETURN
  GOSUB @CODEPOINT2INDEX
  _T=FONTSTARTPAGE+PAGE:IF _T>7 THEN RETURN
@@ -121,7 +121,7 @@ END
  RETURN
 '=====
 @MISAKIFONTDATA
-' л�̫��
+' ﾐｻｷﾌｫﾝﾄ
 ' Copyright(C) 2002-2008 Num Kadoma
 DATA "000000000000000000000000008040000000000040A0400000000000C0408000"
 DATA "0000000000C0C000000000303000000000303000303000000030300030102000"
